@@ -1,0 +1,124 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 1.8rem;
+}
+h3 {
+  font-weight: 900;
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.text-C {
+  text-align: center;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.full-container {
+  width: 100%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* for expanding cart */
+.panel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.panel {
+  transition: flex 0.8s ease-in;
+  position: relative;
+  border-radius: 5rem;
+  height: 40rem;
+  margin: 0 1rem;
+  flex: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto 100%;
+}
+.panelActive {
+  flex: 4;
+}
+.panel h3 {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  opacity: 0;
+  color: var(--bs-cyan);
+  padding: 1rem;
+  white-space: nowrap;
+}
+.panelActive h3 {
+  transition: opacity 0.3s ease-in 0.4s;
+  opacity: 1;
+}
+.panel-1 {
+  background-image: url(../img/blogs/blog_1.jpg);
+}
+.panel-2 {
+  background-image: url(../img/blogs/blog_2.jpg);
+}
+.panel-3 {
+  background-image: url(../img/blogs/blog_3.jpg);
+}
+.panel-4 {
+  background-image: url(../img/blogs/blog_4.jpg);
+}
+
+.panel-5 {
+  background-image: url(../img/blogs/blog_5.jpg);
+}
