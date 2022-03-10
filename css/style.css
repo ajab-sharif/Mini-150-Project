@@ -49,8 +49,7 @@ body {
   padding: 2rem 0;
   overflow-x: hidden;
   font-size: 1.8rem;
-  font-family: "Courier New", Courier, monospace;
-  background-color: rgba(77, 83, 83, 0.549);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h3 {
   font-weight: 900;
@@ -79,7 +78,6 @@ ul {
 }
 .line {
   height: 2px;
-  width: 100%;
   background: #000;
 }
 /* for expanding cart */
@@ -549,4 +547,340 @@ ul {
   opacity: 1;
   left: 0;
   transform: scale(1) rotateY(360deg);
+}
+
+/* Button 12 */
+.btn-12 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-red);
+  border: 1px solid var(--bs-red);
+}
+.btn-12::before {
+  position: absolute;
+  background-color: var(--bs-red);
+  left: 0;
+  top: 50%;
+  content: "";
+  transition: all 0.4s ease;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+
+  box-shadow: -100px 0 0 var(--bs-red);
+}
+.btn-12::after {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  top: 50%;
+  content: "";
+  background-color: var(--bs-red);
+  transition: all 0.4s ease;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 100px 0 0 var(--bs-red);
+  z-index: -1;
+}
+.btn-12:hover::before {
+  opacity: 1;
+  left: 50%;
+  box-shadow: -30px 0 0 var(--bs-red);
+  transform: translate(-50%, -50%);
+}
+.btn-12:hover::after {
+  opacity: 1;
+  right: 50%;
+  box-shadow: 30px 0 0 var(--bs-red);
+  transform: translate(50%, -50%);
+}
+.btn-12 span {
+  transform: scale(0);
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--bs-red);
+  position: absolute;
+}
+.btn-12:hover span {
+  transform: scale(1);
+  transition-delay: 0.3s;
+}
+.btn-12:hover {
+  transition: color 0.3s ease 0.4s;
+  color: var(--bs-light);
+}
+/* Button 13 */
+.btn-13 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  color: var(--bs-white);
+  position: relative;
+}
+.btn-13::before {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -3px;
+  top: -3px;
+  content: "";
+  transition: all 0.3s ease;
+  background: var(--bs-cyan);
+  mix-blend-mode: multiply;
+  transform-origin: top;
+}
+.btn-13::after {
+  mix-blend-mode: multiply;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  content: "";
+  transition: all 0.3s ease;
+  background: var(--bs-red);
+  transform-origin: bottom;
+}
+.btn-13:hover::before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+}
+.btn-13:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+}
+
+.btn-13:hover {
+  color: var(--bs-gray-dark);
+}
+/* Button 14 */
+.btn-14 {
+  font-weight: 900;
+  overflow: hidden;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-yellow);
+}
+.btn-14 span::before,
+.btn-14::before {
+  z-index: -1;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -25%;
+  content: "";
+  transition: all 0.5s ease;
+  background-color: var(--bs-yellow);
+}
+.btn-14 span::after,
+.btn-14::after {
+  background-color: var(--bs-yellow);
+  z-index: -1;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 25%;
+  content: "";
+  transition: all 0.5s ease;
+}
+
+.btn-14 span::before {
+  left: 50%;
+  top: 100%;
+}
+.btn-14 span::after {
+  top: 0;
+  left: 100%;
+}
+.btn-14:hover::before {
+  left: 0;
+}
+.btn-14:hover::after {
+  top: 0;
+  left: 25%;
+}
+
+.btn-14:hover span::before {
+  left: 50%;
+  top: 0;
+}
+.btn-14:hover span::after {
+  top: 0;
+  left: 75%;
+}
+.btn-14:hover {
+  transition: color 0.3s ease 0.3s;
+  color: var(--bs-gray-dark);
+}
+
+/* Button 15*/
+.btn-15 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-dark);
+}
+.btn-15::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  transition: all 1s ease;
+  width: 110%;
+  height: 90%;
+  border-top: 4px solid var(--bs-danger);
+  border-bottom: 4px solid var(--bs-green);
+}
+.btn-15::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: "";
+  transition: all 1s ease;
+  width: 90%;
+  height: 150%;
+  border-left: 4px solid var(--bs-danger);
+  border-right: 4px solid var(--bs-green);
+  transform: translate(-50%, -50%);
+}
+.btn-15:hover::before {
+  transform: translate(-50%, -50%) rotateX(180deg);
+}
+.btn-15:hover::after {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+/* Button 16 */
+.btn-16 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-light);
+  background-color: var(--bs-gray-dark);
+}
+.btn-16::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: -1;
+  transition: all 0.5s ease;
+  border-left: 3px solid var(--bs-gray);
+  border-top: 3px solid var(--bs-gray);
+}
+.btn-16::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  transition: all 0.5s ease;
+  border-right: 3px solid var(--bs-gray);
+  border-bottom: 3px solid var(--bs-gray);
+}
+.btn-16:hover::before,
+.btn-16:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* Button 17 */
+.btn-17 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-dark);
+  overflow: hidden;
+}
+.btn-17::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  background: var(--bs-dark);
+}
+.btn-17::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+  transform: translateX(100%);
+  background: var(--bs-dark);
+}
+
+.btn-17 span::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+  transform: translateY(100%);
+  background: var(--bs-dark);
+}
+.btn-17 span::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+  transform: translateY(-100%);
+  background: var(--bs-dark);
+}
+
+.btn-17:hover::before,
+.btn-17:hover::after {
+  transform: translateX(0);
+}
+.btn-17:hover span::before,
+.btn-17:hover span::after {
+  transform: translateY(0);
 }
