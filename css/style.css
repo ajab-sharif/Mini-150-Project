@@ -34,7 +34,9 @@
   --bs-line: 3px;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -59,9 +61,14 @@ h3 {
 
 a {
   text-decoration: none;
+  text-align: center;
 }
 ul {
   list-style: none;
+}
+img {
+  height: 100%;
+  width: 100%;
 }
 .text-C {
   text-align: center;
@@ -69,16 +76,15 @@ ul {
 .mb-md {
   margin-bottom: 3rem;
 }
-.full-container {
-  width: 100%;
-}
 .container {
   max-width: 112rem;
+  width: 100vw;
   margin: 0 auto;
 }
 .line {
   height: 2px;
   background: #000;
+  margin: 2rem 0;
 }
 /* for expanding cart */
 .panel-container {
@@ -136,11 +142,12 @@ ul {
 }
 /* Button Hover */
 .btn-container {
-  height: 20vh;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+  grid-gap: 5rem;
 }
 
 /* Button 1 */
@@ -678,7 +685,7 @@ ul {
   line-height: 0;
   transition: all 0.5s ease;
   position: relative;
-  color: var(--bs-yellow);
+  color: var(--bs-dark);
 }
 .btn-14 span::before,
 .btn-14::before {
@@ -690,11 +697,11 @@ ul {
   left: -25%;
   content: "";
   transition: all 0.5s ease;
-  background-color: var(--bs-yellow);
+  background-color: var(--bs-dark);
 }
 .btn-14 span::after,
 .btn-14::after {
-  background-color: var(--bs-yellow);
+  background-color: var(--bs-dark);
   z-index: -1;
   width: 25%;
   height: 100%;
@@ -731,7 +738,7 @@ ul {
 }
 .btn-14:hover {
   transition: color 0.3s ease 0.3s;
-  color: var(--bs-gray-dark);
+  color: var(--bs-yellow);
 }
 
 /* Button 15*/
@@ -883,4 +890,403 @@ ul {
 .btn-17:hover span::before,
 .btn-17:hover span::after {
   transform: translateY(0);
+}
+
+/* Button 18 */
+.btn-18 {
+  font-weight: 900;
+  padding: 2rem;
+  line-height: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-dark);
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn-18 span {
+  border: var(--bs-line) solid var(--bs-dark);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-color: var(--bs-light);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn-18 span::after {
+  transition: all 0.6s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-36deg);
+  background-color: var(--bs-light);
+  content: "";
+  width: 8%;
+  height: 500%;
+}
+.btn-18:hover {
+  color: var(--bs-light);
+}
+.btn-18:hover::before {
+}
+.btn-18:hover span::after {
+  width: 110%;
+  background-color: var(--bs-dark);
+  transform: translate(-50%, -50%) rotate(36deg);
+}
+
+/* Button 19*/
+.btn-19 {
+  font-weight: 900;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-dark);
+  height: 4rem;
+  line-height: 2.4;
+  width: 16rem;
+  text-align: center;
+  transition: color 1s;
+  overflow: hidden;
+}
+.btn-19::before {
+  z-index: -1;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  content: "";
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  border-right: 2rem solid transparent;
+  border-top: 2rem solid var(--bs-cyan);
+  border-bottom: 2rem solid var(--bs-cyan);
+}
+.btn-19::after {
+  z-index: -1;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  content: "";
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  border-left: 2rem solid transparent;
+  border-top: 2rem solid var(--bs-cyan);
+  border-bottom: 2rem solid var(--bs-cyan);
+}
+.btn-19:hover::before,
+.btn-19:hover::after {
+  left: 0;
+}
+.btn-19:hover {
+  color: var(--bs-light);
+}
+
+/* Button 20*/
+.btn-20 {
+  font-weight: 900;
+  transition: all 0.5s ease;
+  position: relative;
+  color: var(--bs-yellow);
+  line-height: 0;
+  padding: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.btn-20::before {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  content: "";
+  transition: transform 0.8s ease;
+  transform: skewX(16deg);
+  width: 50%;
+  height: 100%;
+  background-color: var(--bs-gray-dark);
+}
+.btn-20::after {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  content: "";
+  transition: transform 0.8s ease;
+  transform: skewX(16deg);
+  width: 50%;
+  height: 100%;
+  background-color: var(--bs-red);
+}
+.btn-20:hover::before {
+  transform: skewX(0deg);
+  top: 0;
+  left: 50%;
+}
+.btn-20:hover::after {
+  top: 0;
+  transform: skewX(0deg);
+  left: 0;
+}
+/* navigations style */
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+/* nav all comon style */
+.nav {
+  margin: 1rem 0;
+  width: 100%;
+  background: var(--bs-gray-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav li {
+  position: relative;
+  margin: 1rem;
+}
+.nav a {
+  color: var(--bs-light);
+  line-height: 1;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+  padding: 0.6rem 0;
+  line-height: 1;
+}
+
+/* nav  01 */
+.nav-1 li a::after {
+  content: "";
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 2px;
+  transform-origin: right;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  position: absolute;
+  background: var(--bs-light);
+}
+
+.nav-1 li a::before {
+  content: "";
+  width: 100%;
+  transition: transform 0.5s ease;
+  height: 2px;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  position: absolute;
+  transform-origin: left;
+  background-color: var(--bs-light);
+}
+.nav-1 li a:hover:before {
+  transform: scaleX(1);
+}
+
+.nav-1 li a:hover:after {
+  transform: scaleX(1);
+}
+
+/* nav  02 */
+.nav-2 li {
+  margin: 1rem;
+}
+.nav-2 a {
+  padding: 1rem;
+}
+.nav-2 li a::after {
+  content: "";
+  transition: all 0.5s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: right;
+  opacity: 0;
+  border: 1px solid var(--bs-light);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-width: 0 0 3px 3px;
+}
+
+.nav-2 li a::before {
+  content: "";
+  transition: all 0.5s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: right;
+  border: 1px solid var(--bs-light);
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-width: 3px 3px 0 0;
+}
+.nav-2 li a:hover:before {
+  top: -6px;
+  right: -6px;
+  opacity: 1;
+}
+
+.nav-2 li a:hover:after {
+  opacity: 1;
+  bottom: -6px;
+  left: -6px;
+}
+.nav-2 a:hover {
+  background: var(--bs-light);
+  color: var(--bs-gray-dark);
+}
+
+/* nav  03 */
+.nav-3 {
+  border: 3px solid var(--bs-gray-dark);
+  background: transparent;
+}
+
+.nav-3 li a {
+  padding: 1rem 2rem;
+  position: relative;
+  color: var(--bs-gray-dark);
+  transition: color 0.5s ease;
+}
+.nav-3 li a span {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  background: var(--bs-dark);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+  transform: scaleY(0);
+}
+.nav-3 li a:hover span:nth-child(1) {
+  transform: scaleY(1);
+}
+
+.nav-3 li a:hover span:nth-child(2) {
+  transform: scaleY(1);
+}
+
+.nav-3 li a:hover span:nth-child(3) {
+  transform: scaleY(1);
+}
+
+.nav-3 li a:hover span:nth-child(4) {
+  transform: scaleY(1);
+}
+
+.nav-3 li a span:nth-child(2) {
+  transition-delay: 0.15s;
+  left: 25%;
+}
+.nav-3 li a span:nth-child(3) {
+  transition-delay: 0.3s;
+  left: 50%;
+}
+.nav-3 li a span:nth-child(4) {
+  left: 75%;
+  transition-delay: 0.45s;
+}
+.nav-3 li a:hover {
+  color: var(--bs-light);
+}
+
+/* nav  04 */
+.nav-4 li a {
+  position: relative;
+}
+.nav-4 li a:before {
+  content: "";
+  height: 5px;
+  width: 0;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: var(--bs-cyan);
+  transition: all 0.5s ease;
+}
+
+.nav-4 li a::after {
+  transition: all 0.5s ease;
+  content: "";
+  height: 5px;
+  width: 0;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: var(--bs-yellow);
+}
+.nav-4 li a:hover::before {
+  width: 50%;
+  transform: translateX(100%);
+}
+
+.nav-4 li a:hover::after {
+  width: 50%;
+  transform: translateX(-100%);
+}
+
+/* nav  05 */
+.nav-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-5 li a {
+  height: 4rem;
+  line-height: 1.2;
+  position: relative;
+  transition: transform 0.5s ease;
+  padding: 0;
+  overflow: hidden;
+}
+.nav-5 li a span {
+  width: 100%;
+  height: 100%;
+  padding: 0.6rem 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.5s ease;
+  color: var(--bs-light);
+  text-transform: capitalize;
+  transition-delay: 0.5s;
+}
+.nav-5 li a:hover span:nth-child(1) {
+  transition-delay: 0s;
+  transform: translateY(-100%);
+}
+
+.nav-5 li a:hover span:nth-child(2) {
+  transition-delay: 0s;
+  transform: translateY(-100%);
+}
+.nav-5 li a:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bs-cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+.nav-5 li a:hover:before {
+  transition-delay: 0.6s;
+  transform: scaleX(1);
 }
